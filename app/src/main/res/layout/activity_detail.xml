@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.udacity.sandwichclub.DetailActivity">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_iv"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/sandwich_picture_content_description"
+            android:scaleType="fitXY" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/borderline_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/margin_border_layout" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/borderline_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/margin_border_layout"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <TextView
+            android:id="@+id/sandwich_name_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/bright_blue"
+            android:paddingBottom="@dimen/margin_bottom"
+            android:paddingLeft="@dimen/margin_border_layout"
+            android:paddingRight="@dimen/margin_border_layout"
+            android:paddingTop="@dimen/margin_top"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/lighter_blue"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/image_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Name" />
+
+        <TextView
+            android:id="@+id/alias_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_border_layout"
+            android:text="@string/detail_also_known_as_label"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/borderline_start"
+            app:layout_constraintTop_toBottomOf="@+id/image_iv" />
+
+
+        <TextView
+            android:id="@+id/sandwich_alias_value_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintEnd_toStartOf="@+id/borderline_end"
+            app:layout_constraintStart_toStartOf="@+id/borderline_start"
+            app:layout_constraintTop_toBottomOf="@+id/alias_label_tv"
+            tools:text="Different Aliases" />
+
+        <TextView
+            android:id="@+id/sandwich_birthplace_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_border_layout"
+            android:text="@string/detail_place_of_origin_label"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintStart_toStartOf="@+id/borderline_start"
+            app:layout_constraintTop_toBottomOf="@+id/sandwich_alias_value_tv" />
+
+        <TextView
+            android:id="@+id/sandwich_birthplace_origin_value_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintEnd_toStartOf="@+id/borderline_end"
+            app:layout_constraintStart_toStartOf="@+id/borderline_start"
+            app:layout_constraintTop_toBottomOf="@+id/sandwich_birthplace_label_tv"
+            tools:text="Mumbai" />
+
+        <TextView
+            android:id="@+id/sandwich_description_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_border_layout"
+            android:text="@string/detail_description_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/borderline_start"
+            app:layout_constraintTop_toBottomOf="@+id/sandwich_birthplace_origin_value_tv"/>
+
+
+        <TextView
+            android:id="@+id/sandwich_description_value_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintEnd_toStartOf="@+id/borderline_end"
+            app:layout_constraintStart_toStartOf="@+id/borderline_start"
+            app:layout_constraintTop_toBottomOf="@+id/sandwich_description_label_tv"
+            tools:text="This food is awesome and definitely worth tryong to understand the nuances of flavours." />
+
+
+        <TextView
+            android:id="@+id/sandwich_contents_label_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_border_layout"
+            android:text="@string/detail_ingredients_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintStart_toStartOf="@+id/borderline_start"
+            app:layout_constraintTop_toBottomOf="@+id/sandwich_description_value_tv"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sandwich_contents_value_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top"
+            android:paddingBottom="@dimen/margin_border_layout"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintEnd_toStartOf="@+id/borderline_end"
+            app:layout_constraintStart_toStartOf="@+id/borderline_start"
+            app:layout_constraintTop_toBottomOf="@+id/sandwich_contents_label_tv"
+            tools:text="The potatoes"/>
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
