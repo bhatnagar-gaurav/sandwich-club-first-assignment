@@ -73,6 +73,7 @@ public class DetailActivity extends AppCompatActivity {
         populateUI(sandwich);
         Picasso.with(this)
                 .load(sandwich.getImage())
+                .placeholder(R.drawable.placeholder)
                 .resize(0, 250)
                 .into(sandwichImageView);
 
